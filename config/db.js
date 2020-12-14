@@ -4,11 +4,15 @@ const mongoose = require('mongoose');
 const config = require('config');
 
 const mongoURL = config.get('mongoURL');
+// console.log('MongoURL' + mongoURL);
 
 const connectDB = async () => {
   try {
     await mongoose.connect(mongoURL, {
-urlEncode });
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useUnifiedTopology: true,
+    });
 
     console.log('Connected to MongoDB...');
   } catch (error) {

@@ -1,3 +1,4 @@
 {
-    "mongoURL": "mongodb+srv://shre:shre123@devconnector.6m52x.mongodb.net/Test?retryWrites=true&w=majority"
+    "mongoURL": "mongodb://shre:shre123@devconnector-shard-00-00.6m52x.mongodb.net:27017,devconnector-shard-00-01.6m52x.mongodb.net:27017,devconnector-shard-00-02.6m52x.mongodb.net:27017/ConnectorData?ssl=true&replicaSet=atlas-g05pf2-shard-0&authSource=admin&retryWrites=true&w=majority",
+    "jwtSecret": "secrettoken"
 }

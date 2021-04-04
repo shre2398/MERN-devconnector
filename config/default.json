@@ -1,4 +1,6 @@
 {
     "mongoURL": "mongodb://shre:shre123@devconnector-shard-00-00.6m52x.mongodb.net:27017,devconnector-shard-00-01.6m52x.mongodb.net:27017,devconnector-shard-00-02.6m52x.mongodb.net:27017/ConnectorData?ssl=true&replicaSet=atlas-g05pf2-shard-0&authSource=admin&retryWrites=true&w=majority",
-    "jwtSecret": "secrettoken"
+    "jwtSecret": "secrettoken",
+    "githubClientId": "Iv1.4ee3589084bb6dc0",
+    "githubSecret": "fd59ec0e340445fe4894c46250e271171e5176b8"
 }

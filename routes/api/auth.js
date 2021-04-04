@@ -27,13 +27,13 @@ router.post(
   '/',
   [
     check('email', 'Please include a valid email').isEmail(),
-    check('password', 'Password is required').exists()
+    check('password', 'Password is required').exists(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({
-        errors: errors.array()
+        errors: errors.array(),
       });
     }
 
@@ -44,7 +44,7 @@ router.post(
 
       if (!user) {
         return res.status(400).json({
-          errors: [{ msg: 'Invalid Credentials' }]
+          errors: [{ msg: 'Invalid Credentials' }],
         });
       }
 
@@ -52,14 +52,14 @@ router.post(
 
       if (!isMatch) {
         return res.status(400).json({
-          errors: [{ msg: 'Invalid Credentials' }]
+          errors: [{ msg: 'Invalid Credentials' }],
         });
       }
 
       const payload = {
         user: {
-          id: user.id
-        }
+          id: user.id,
+        },
       };
 
       jwt.sign(
